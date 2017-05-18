@@ -8,11 +8,13 @@ AirlineController.prototype={
         this.model = model;
         this.view = view;
         Proxy.getCiudades(function(result){
+            //console.log("Ciudades:"+result);
             model.ciudades = result;
             view.showOrigenes();
             view.showDestinos();
         });
         Proxy.getPromo(function(result){
+            //console.log("Promos:"+result);
             model.promo=result;
             view.showPromos();
         });
@@ -27,5 +29,16 @@ AirlineController.prototype={
             model.buscados = result;
             view.showBuscados();
         });
+    },
+    agregarACarrito:function(e){    
+        var objeto = revive(e);
+          if(!model.carrito[e])//no se repetiran viajes
+            model.carrito[e] = objeto;
+        else{
+            alert("El viaje ya fue agregado con anterioridad");
+            return;
+        }
+            
+        this.view.showPopUp(objeto);
     }
 };

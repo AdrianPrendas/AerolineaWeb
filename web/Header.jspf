@@ -1,0 +1,76 @@
+<script>
+    $(function () {
+        $('#login').bootstrapToggle({
+            onstyle: "danger",
+            offstyle: "success",
+            size: "large"
+        });
+
+
+        $('#login').change(function () {
+            if ($(this).is(':checked')){
+                $("#log").modal('show');
+            }else
+                alert("unchecked");
+        });
+    });
+</script>
+<header>
+    <div class="container cabecera">
+        <div class="container">
+            <a href="Index.jsp">
+                <h1 style="display: inline-block;">Hola Mundo</h1>    
+            </a>
+            
+            <a href="#" onclick="alert('lupa');"><img src="pictures/lupa.png" title="buscar" style="width:75px;display:inline-block;margin-left: 10px;"></a>
+            <div style="margin-top: 15px;margin-right: 10px; display: inline-flex; align-items: center; justify-content: end; float:right;">
+                <a href="#" onclick="alert('sign-in');">
+                    <i style="color:white;" class='fa fa-sign-in fa-5x'>
+                        <p style="color:white;font-size: 14px;text-align: center;">sign-in</p>
+                    </i>
+                </a>    
+            </div>
+            <div style="margin-top: 15px;margin-right: 10px; display: inline-flex; align-items: center; justify-content: end; float:right;">
+                <a href="#" onclick="alert('vacio');"><img id="imgCarrito" src="pictures/carrito_vacio.png" title="buscar" style="width:100px;display:inline-block;margin-right: 10px;display: none;"></a>
+                <a href="#" onclick="alert('lleno');"><img id="imgCarrito" src="pictures/carrito_lleno.png" title="buscar" style="width:100px;display:inline-block;margin-right: 10px;"></a>
+
+                <div class="checkbox" style="display:inline-block;">
+                    <label>
+                        <input type="checkbox" data-toggle="toggle"  data-on="<i class='fa fa-expeditedssl'></i> logout" data-off="<i class='fa fa-keyboard-o'></i> login" id="login">
+                    </label>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</header>
+<style>
+    .cabecera{background:#5068FF;color:#FF5B5B;height: 110px;}
+
+    @media only screen and (max-width: 820px) and (min-width: 621px) {  
+        .cabecera {height: 110px;}
+    }  
+
+
+    @media only screen and (max-width: 620px) and (min-width: 691px) {  
+        .cabecera {height: 190px;}
+    }  
+
+
+    @media only screen and (max-width: 690px) and (min-width: 403px) {  
+        .cabecera {height: 190px;}
+    }  
+
+
+    @media only screen and (max-width: 402px) and (min-width: 5px)  {  
+        .cabecera {height: 280px;}
+    } 
+    a h1 {
+        color: #FF5B5B;
+    }
+</style>
+
+
+
+

@@ -1,97 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>Hola mundo</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
-    <!-- Google Web Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>    
-    <link href='http://fonts.googleapis.com/css?family=Indie Flower&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-    <!--Products-carousel CSS style -->
-    <link href="css/product-carousel.css" rel="stylesheet">     
-    <link rel="stylesheet" href="css/animate.css"> 
-    <!--The jQuery library from local-->    
-    <!--<script type="text/javascript" src="js/jquery.js"></script>-->
-    <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel = "stylesheet">
-    <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
-    <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-    <!-- Bootstrap library from local -->        
-    <script type="text/javascript" src="js/bootstrap.js"></script>
-    <link rel="stylesheet" href="css/myCSS.css">
-    <script src="js/loadIndex2.js"></script>
-    <script src="js/JsonUtils.js"></script>
-    <script src="js/Vuelo.js"></script>
-    <script src="js/Ciudad.js"></script>
-    <script src="js/Proxy.js"></script>
-    <script src="js/AirlineModel.js"></script>
-    <script src="js/AirlineView.js"></script>
-    <script src="js/AirlineController.js"></script>
-</head>
-<body>
-    <!-- Complete Range of Products carosel-->
-    <div class="ourbkground">
+    <head>
+        <meta charset="utf-8">
+        <title>Hola mundo</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+        <!-- Google Web Fonts -->
+        <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>    
+        <link href='http://fonts.googleapis.com/css?family=Indie Flower&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <!--Products-carousel CSS style -->
+        <link href="css/product-carousel.css" rel="stylesheet">     
+        <link rel="stylesheet" href="css/animate.css"> 
+        <!--The jQuery library from local-->    
+        <!--<script type="text/javascript" src="js/jquery.js"></script>-->
+        <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel = "stylesheet">
+        <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+        <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+        <!-- Bootstrap library from local -->        
+        <script type="text/javascript" src="js/bootstrap.js"></script>
+        <link rel="stylesheet" href="css/myCSS.css">
+        <script src="js/loadIndex2.js"></script>
+        <script src="js/JsonUtils.js"></script>
+        <script src="js/Vuelo.js"></script>
+        <script src="js/Ciudad.js"></script>
+        <script src="js/Proxy.js"></script>
+        <script src="js/AirlineModel.js"></script>
+        <script src="js/AirlineView.js"></script>
+        <script src="js/AirlineController.js"></script>
+        <!--my own styles-->
+        <link href="css/indexJsp.css" rel="stylesheet"> 
+    </head>
+    <body style="background:#3F4DB8;">
+        <!-- Complete Range of Products carosel-->
+        <div class="ourbkground">
 
-        <div class="container text-center">
-            <h1 class="text-center">Vuelos en promocion</h1>
-            <div class="row">
-                <div class="carousel slide row innerbkground" data-ride="carousel" data-type="multi" data-interval="9000" id="productscarousel">
-                    <div class="carousel-inner" id="carousel-contenido">
-                        <!--Contenido cargado con javascript-->
+            <div class="container text-center">
+                <h1 class="text-center">Vuelos en promocion</h1>
+                <div class="row">
+                    <div class="carousel slide row innerbkground" data-ride="carousel" data-type="multi" data-interval="5000" id="productscarousel">
+                        <div class="carousel-inner" id="carousel-contenido">
+                            <!--Contenido cargado con javascript-->
+                        </div>
+                        <a class="left carousel-control" href="#productscarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+                        <a class="right carousel-control" href="#productscarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a> 
                     </div>
-                    <a class="left carousel-control" href="#productscarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
-                    <a class="right carousel-control" href="#productscarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a> 
                 </div>
             </div>
-        </div>
 
-        <br>
-        <br>
+            <br>
 
-        <div class="container text-center">
-            <h1 class="text-center">Busqueda de Vuelos</h1>
-            
-            <div class="mainbox">
-                <div class="row" >
+            <div class="container text-center">
+                <h1 class="text-center">Busqueda de Vuelos</h1>
 
-                    <div class="col-sm-2">
-                        <h3>Origen</h3>
-                        <select name="ciudades" id="origen"></select>        
+                <div class="mainbox">
+                    <div class="row" >
+
+                        <div class="col-sm-2">
+                            <h3>Origen</h3>
+                            <select name="ciudades" id="origen"></select>        
+                        </div>
+
+                        <div class="col-sm-2">
+                            <h3>Destino</h3>
+                            <select name="ciudades" id="destino"></select>    
+                        </div>
+
+                        <div class="col-sm-2">
+                            <h3>Salida</h3>
+                            <input type="text" size="15" id="salida">
+                        </div>
+
+                        <div class="col-sm-2">
+                            <h3>Llegada</h3>
+                            <input type="text" size="15" id="llegada">
+                        </div>
+
+                        <div class="col-sm-2">
+                            <h3>Precios</h3>
+                            <select name="precio" id="precio"></select>    
+                        </div>
+                        <div class="col-sm-2">
+                            <button type="button" class="mybtn" id="btnBuscar">Buscar</button>
+                        </div>
+
                     </div>
-                    
-                    <div class="col-sm-2">
-                        <h3>Destino</h3>
-                        <select name="ciudades" id="destino"></select>    
+                    <br><br>
+                    <div class="container row" id="busqueda">
+                        <!--resultado de la busqueda, cargado por AirlineView.js-->
                     </div>
-                    
-                    <div class="col-sm-2">
-                        <h3>Salida</h3>
-                        <input type="text" id="salida">
+                    <div class="container row">
+                        <nav>
+                            <ul class="pagination" id="paginacion">
+                            </ul>
+                        </nav>
                     </div>
-                    
-                    <div class="col-sm-2">
-                        <h3>Llegada</h3>
-                        <input type="text" id="llegada">
-                    </div>
-                    
-                    <div class="col-sm-2">
-                        <h3>Precios</h3>
-                        <select name="precio" id="precio"></select>    
-                    </div>
-                    <div class="col-sm-2">
-                        <button type="button" class="mybtn" id="btnBuscar">Buscar</button>
-                    </div>
-                    
                 </div>
-                <div class="row" id="busqueda"></div>
             </div>
-        </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-    </div>                                                        
-</body>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <!--Sanchez pop-up-->
+            <div class="overlay" id="overlay"></div>
+            <div class="popup" id="pop-up">
+                <div class="container">
+                    <div id="pop-up-container">
+                    </div>
+
+                    <button class="mysecondbtn" onclick ="
+                            document.getElementById('overlay').style.display = 'none';
+                            document.getElementById('pop-up').style.display = 'none';">
+                        Continuar comprando...
+                    </button>   
+                </div>
+            </div>
+            <!--Sanchez pop-up-->
+        </div>                                                        
+    </body>
 </html>                    

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 12-may-2017 14:55:19 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="cr.ac.una.prograIV.AirLine.domain.Ciudad" table="ciudad" catalog="airline" optimistic-lock="version">
+        <id name="pkSigla" type="string">
+            <column name="pk_sigla" length="3" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="nombre" length="15" not-null="true" unique="true" />
+        </property>
+        <property name="pais" type="string">
+            <column name="pais" length="15" not-null="true" />
+        </property>
+        <set name="vuelosForCiudadDestino" table="vuelo" inverse="true" lazy="false" fetch="select">
+            <key>
+                <column name="ciudadDestino" length="3" not-null="true" />
+            </key>
+            <one-to-many class="cr.ac.una.prograIV.AirLine.domain.Vuelo" />
+        </set>
+        <set name="vuelosForCiudadOrigen" table="vuelo" inverse="true" lazy="false" fetch="select">
+            <key>
+                <column name="ciudadOrigen" length="3" not-null="true" />
+            </key>
+            <one-to-many class="cr.ac.una.prograIV.AirLine.domain.Vuelo" />
+        </set>
+    </class>
+</hibernate-mapping>

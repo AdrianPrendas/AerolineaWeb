@@ -4,7 +4,6 @@
     color: #fff;
     text-transform: capitalize;
     font-weight: 400;
-	
 
   background: #683717; /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(left,rgba(104,55,23,0.9), rgba(61,45,39,0.1)); /*Safari 5.1-6*/
@@ -20,7 +19,7 @@
     background: red;
     color: #fff;
     display: block;
-    width: 60%;
+    width: 100px;
     margin: 1.5em auto 0;
     border-radius: 4px;
     font-weight: 700;
@@ -32,6 +31,27 @@
 	background: #BDA297;
     color:#3D2D27;
 }
+
+.mysecondbtn{
+	 font-size: .85em;
+    text-transform: uppercase;
+    padding: 1em 1em;
+    background: red;
+    color: #fff;
+    display: inline-block;
+    width: 200px;
+    margin: 1.5em auto 0;
+    border-radius: 4px;
+    font-weight: 500;
+    text-decoration:none;
+    letter-spacing: 1px;
+}
+
+.mysecondbtn:hover{
+	background: #BDA297;
+    color:#3D2D27;
+}
+
 /********************************end*of*index2.html****************************************************/
 
 /*defaul*/
@@ -49,15 +69,15 @@
 	#logo h1{font-family: Georgia;display: inline-block;font-size: 24px;}
 	#logo img{width: 45px;}
 	#carusel{margin-left: 0px;margin-right: 0px;}
-	.carousel,.item,.active {height: 175px;}
-	.carousel-inner {height: 175px;}
+	.carousel,.item,.active {height: 400px;}
+	.carousel-inner {height: 400px;}
 }
 @media screen and (min-width: 500px) {  /* width:>500 */
 	#logo h1{display: inline-block;}
 	#logo img{margin-top: 20px;}
 	#carusel{margin-left: 100px;margin-right: 100px;}
-	.carousel,.item,.active {height: 300px;}
-	.carousel-inner {height: 300px;}
+	.carousel,.item,.active {height: 400px;}
+	.carousel-inner {height: 400px;}
 	
 }
 @media screen and (min-width: 768px) {  /* width:>768 */
@@ -83,6 +103,5 @@
 }
 
 /*CSS Alejandro*/
-
 
 

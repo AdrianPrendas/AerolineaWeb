@@ -54,11 +54,13 @@ System.out.println(accion);
                 case "ciudadListAll":
                     ciudades = model.getCiudades();
                     json = gson.toJson(ciudades);
+System.out.println("ciudadListAll: "+json);
                     out.write(json);
                     break;
                 case "vueloListPromo":
                     vuelos = model.getPromo();
                     json = gson.toJson(vuelos);
+System.out.println("vueloListPromo: "+json);
                     out.write(json);
                     break;
                 case "vueloListSearch":
@@ -68,6 +70,7 @@ System.out.println("origen="+origen);
 System.out.println("destino="+destino);
                     vuelos = model.getVuelos(origen,destino);
                     json = gson.toJson(vuelos);
+System.out.println("vueloListSearch: "+json);
                     out.write(json);
                     break;
             }

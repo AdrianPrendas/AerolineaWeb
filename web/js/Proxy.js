@@ -30,7 +30,7 @@ Proxy.getPromo = function (callBack) {
 
 
 Proxy.vuelosSearch = function (origen,destino,callBack) {
-    console.log("origen:"+origen+"     destino:"+destino);
+    //console.log("origen:"+origen+"     destino:"+destino);
     var AJAX_req = new XMLHttpRequest();
     url = "/AirLine/AirlineService?action=vueloListSearch";
     AJAX_req.open("POST", url, true);

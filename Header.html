@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!--Jquery-->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+	<title>Document</title>
+	<style>
+		.slow .toggle-group { transition: left 0.7s; -webkit-transition: left 3s; }
+		.rating {
+			unicode-bidi: bidi-override;
+			direction: rtl;
+		}
+		.rating > span {
+			display: inline-block;
+			position: relative;
+			width: 1.1em;
+		}
+		.rating > span:hover:before,
+		.rating > span:hover ~ span:before {
+			content: "\2605";
+			position: absolute;
+		}
+	</style>
+
+	
+</head>
+<body style="background:#3F4DB8">
+	<header>
+		<div class="container" style="background:#5068FF;color:#FF5B5B;font-family:inherit;">
+			<h1>Hola Mundo</h1>
+			<div class="container" style="text-align:right;padding: 0px 40px 10px;">
+				<a href="#" onclick="alert('lupa');"><img src="web/pictures/lupa.png" title="buscar" style="width:75px;"></a>
+				<a href="#" onclick="alert('vacio');"><img src="web/pictures/carrito_vacio.png" title="buscar" style="width:100px;"></a>
+				<a href="#" onclick="alert('lleno');"><img src="web/pictures/carrito_lleno.png" title="buscar" style="width:100px;;padding:0px 10px;"></a>
+				
+				<div class="checkbox slow" style="display:inline-block;">
+					<label>
+						<input type="checkbox" data-toggle="toggle" data-on="<i class='fa fa-stop'></i> logout" data-off="<i class='fa fa-play'></i> login" id="login">
+					</label>
+
+					<!--http://fontawesome.io/examples/-->	
+					<i class="fa fa-cog fa-spin fa-3x fa-fw" style="color:white;"></i>
+					<span class="sr-only">Loading...</span>
+
+					<div class="rating">
+						<span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+					</div>
+
+				</div>
+			</div>
+			
+		</div>
+	</header>
+
+
+
+	<script>
+		$(function() {
+			$('#login').bootstrapToggle({
+				onstyle:"danger",
+				offstyle:"success"
+			});
+			
+			
+			$('#login').change(function() {
+				if($(this).is(':checked'))
+					alert("checked");
+				else
+					alert("unchecked");
+					//$('#login').bootstrapToggle((confirm("si o no"))?'on':'off');
+				});
+		});
+	</script>
+
+	<!--toggle-->
+	<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+	<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+</body>
+</html>

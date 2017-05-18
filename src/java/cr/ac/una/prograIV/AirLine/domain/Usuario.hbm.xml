@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 12-may-2017 14:55:19 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="cr.ac.una.prograIV.AirLine.domain.Usuario" table="usuario" catalog="airline" optimistic-lock="version">
+        <id name="pkId" type="int">
+            <column name="pk_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="nombre" length="45" not-null="true" />
+        </property>
+        <property name="apellidos" type="string">
+            <column name="apellidos" length="45" not-null="true" />
+        </property>
+        <property name="password" type="string">
+            <column name="password" length="45" not-null="true" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="45" not-null="true" />
+        </property>
+        <property name="fechaNacimiento" type="date">
+            <column name="fecha_nacimiento" length="10" not-null="true" />
+        </property>
+        <property name="celular" type="int">
+            <column name="celular" not-null="true" />
+        </property>
+        <property name="direccion" type="java.lang.Float">
+            <column name="direccion" precision="12" scale="0" />
+        </property>
+        <set name="tiquetes" table="tiquete" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="usuario" not-null="true" />
+            </key>
+            <one-to-many class="cr.ac.una.prograIV.AirLine.domain.Tiquete" />
+        </set>
+    </class>
+</hibernate-mapping>

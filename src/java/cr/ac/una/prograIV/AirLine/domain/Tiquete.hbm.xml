@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 12-may-2017 14:55:19 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="cr.ac.una.prograIV.AirLine.domain.Tiquete" table="tiquete" catalog="airline" optimistic-lock="version">
+        <id name="pkNumero" type="int">
+            <column name="pk_numero" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="usuario" class="cr.ac.una.prograIV.AirLine.domain.Usuario" fetch="select">
+            <column name="usuario" not-null="true" />
+        </many-to-one>
+        <many-to-one name="vuelo" class="cr.ac.una.prograIV.AirLine.domain.Vuelo" fetch="select">
+            <column name="vuelo" not-null="true" />
+        </many-to-one>
+        <property name="idaVuelta" type="boolean">
+            <column name="ida_vuelta" not-null="true" />
+        </property>
+        <set name="asientos" table="asiento" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="tiquete" not-null="true" />
+            </key>
+            <one-to-many class="cr.ac.una.prograIV.AirLine.domain.Asiento" />
+        </set>
+    </class>
+</hibernate-mapping>

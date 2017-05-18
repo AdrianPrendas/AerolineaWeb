@@ -1,17 +1,18 @@
 
-function Vuelo(codigo, ciudadOrigen, ciudadDestino, costo, escalas) {
-    this.Vuelo(codigo, ciudadOrigen, ciudadDestino, costo, escalas);
+function Vuelo(numero, ciudadOrigen, ciudadDestino, costo, escalas) {
+    this.Vuelo(numero, ciudadOrigen, ciudadDestino, costo, escalas);
 }
 
 Vuelo.prototype = {
-    Vuelo: function (codigo, ciudadOrigen, ciudadDestino, costo, escalas){
-        this.codigo = codigo;
-        this.ciudadOrigen = ciudadOrigen;
-        this.ciudadDestino = ciudadDestino;
+    Vuelo: function (numero, ciudadOrigen, ciudadDestino, costo, escalas){
+        this.pkNumero = numero;
+        this.ciudadByCiudadOrigen = ciudadOrigen;
+        this.ciudadByCiudadDestino = ciudadDestino;
         this.costo=costo;
         this.escalas = escalas;
     },
     toString: function () {
-        return "";
+        return this.pkNumero+" "+this.ciudadByCiudadOrigen+" "+this.ciudadByCiudadDestino+" "+
+                this.costo+" "+this.escalas;
     }
 };
