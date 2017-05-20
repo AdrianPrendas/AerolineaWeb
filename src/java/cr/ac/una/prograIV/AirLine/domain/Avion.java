@@ -1,5 +1,5 @@
 package cr.ac.una.prograIV.AirLine.domain;
-// Generated 12-may-2017 14:55:18 by Hibernate Tools 4.3.1
+// Generated 18-may-2017 21:04:02 by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;

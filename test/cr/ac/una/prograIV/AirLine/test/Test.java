@@ -75,18 +75,18 @@ public class Test {
 
     public static void main(String[] args) {
         
-        /*try {
+        try {
             new Test();
         } catch (Exception ex) {
             Logger.getLogger(Test.class.getName()).log(Level.SEVERE, null, ex);
-        }*/
+        }
         
-        CiudadBL cBL = new CiudadBL();
+        /*CiudadBL cBL = new CiudadBL();
         VueloBL vBL = new VueloBL();
         List<Vuelo> lista = vBL.findAll(Vuelo.class.getName());
         for(Vuelo v :lista){
             System.out.println(v);
-        }
+        }*/
 
     }
 }

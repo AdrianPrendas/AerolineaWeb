@@ -6,11 +6,13 @@
     <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
     <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/airline?zeroDateTimeBehavior=convertToNull</property>
     <property name="hibernate.connection.username">root</property>
-    <mapping resource="cr/ac/una/prograIV/AirLine/domain/Avion.hbm.xml"/>
-    <mapping resource="cr/ac/una/prograIV/AirLine/domain/Usuario.hbm.xml"/>
-    <mapping resource="cr/ac/una/prograIV/AirLine/domain/Vuelo.hbm.xml"/>
-    <mapping resource="cr/ac/una/prograIV/AirLine/domain/Tiquete.hbm.xml"/>
     <mapping resource="cr/ac/una/prograIV/AirLine/domain/Ciudad.hbm.xml"/>
+    <mapping resource="cr/ac/una/prograIV/AirLine/domain/Vuelo.hbm.xml"/>
+    <mapping resource="cr/ac/una/prograIV/AirLine/domain/Avion.hbm.xml"/>
+    <mapping resource="cr/ac/una/prograIV/AirLine/domain/Compra.hbm.xml"/>
+    <mapping resource="cr/ac/una/prograIV/AirLine/domain/Cliente.hbm.xml"/>
     <mapping resource="cr/ac/una/prograIV/AirLine/domain/Asiento.hbm.xml"/>
+    <mapping resource="cr/ac/una/prograIV/AirLine/domain/Tiquete.hbm.xml"/>
+    <mapping resource="cr/ac/una/prograIV/AirLine/domain/Usuario.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>

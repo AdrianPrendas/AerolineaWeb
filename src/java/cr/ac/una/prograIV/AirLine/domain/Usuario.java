@@ -1,8 +1,7 @@
 package cr.ac.una.prograIV.AirLine.domain;
-// Generated 12-may-2017 14:55:18 by Hibernate Tools 4.3.1
+// Generated 18-may-2017 21:04:02 by Hibernate Tools 4.3.1
 
 
-import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -13,38 +12,24 @@ public class Usuario  implements java.io.Serializable {
 
 
      private int pkId;
-     private String nombre;
-     private String apellidos;
-     private String password;
-     private String email;
-     private Date fechaNacimiento;
-     private int celular;
-     private Float direccion;
-     private Set<Tiquete> tiquetes = new HashSet<Tiquete>(0);
+     private String clave;
+     private int tipo;
+     private Set<Cliente> clientes = new HashSet<Cliente>(0);
 
     public Usuario() {
     }
 
 	
-    public Usuario(int pkId, String nombre, String apellidos, String password, String email, Date fechaNacimiento, int celular) {
+    public Usuario(int pkId, String clave, int tipo) {
         this.pkId = pkId;
-        this.nombre = nombre;
-        this.apellidos = apellidos;
-        this.password = password;
-        this.email = email;
-        this.fechaNacimiento = fechaNacimiento;
-        this.celular = celular;
+        this.clave = clave;
+        this.tipo = tipo;
     }
-    public Usuario(int pkId, String nombre, String apellidos, String password, String email, Date fechaNacimiento, int celular, Float direccion, Set<Tiquete> tiquetes) {
+    public Usuario(int pkId, String clave, int tipo, Set<Cliente> clientes) {
        this.pkId = pkId;
-       this.nombre = nombre;
-       this.apellidos = apellidos;
-       this.password = password;
-       this.email = email;
-       this.fechaNacimiento = fechaNacimiento;
-       this.celular = celular;
-       this.direccion = direccion;
-       this.tiquetes = tiquetes;
+       this.clave = clave;
+       this.tipo = tipo;
+       this.clientes = clientes;
     }
    
     public int getPkId() {
@@ -54,61 +39,26 @@ public class Usuario  implements java.io.Serializable {
     public void setPkId(int pkId) {
         this.pkId = pkId;
     }
-    public String getNombre() {
-        return this.nombre;
+    public String getClave() {
+        return this.clave;
     }
     
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setClave(String clave) {
+        this.clave = clave;
     }
-    public String getApellidos() {
-        return this.apellidos;
-    }
-    
-    public void setApellidos(String apellidos) {
-        this.apellidos = apellidos;
-    }
-    public String getPassword() {
-        return this.password;
+    public int getTipo() {
+        return this.tipo;
     }
     
-    public void setPassword(String password) {
-        this.password = password;
+    public void setTipo(int tipo) {
+        this.tipo = tipo;
     }
-    public String getEmail() {
-        return this.email;
-    }
-    
-    public void setEmail(String email) {
-        this.email = email;
-    }
-    public Date getFechaNacimiento() {
-        return this.fechaNacimiento;
+    public Set<Cliente> getClientes() {
+        return this.clientes;
     }
     
-    public void setFechaNacimiento(Date fechaNacimiento) {
-        this.fechaNacimiento = fechaNacimiento;
-    }
-    public int getCelular() {
-        return this.celular;
-    }
-    
-    public void setCelular(int celular) {
-        this.celular = celular;
-    }
-    public Float getDireccion() {
-        return this.direccion;
-    }
-    
-    public void setDireccion(Float direccion) {
-        this.direccion = direccion;
-    }
-    public Set<Tiquete> getTiquetes() {
-        return this.tiquetes;
-    }
-    
-    public void setTiquetes(Set<Tiquete> tiquetes) {
-        this.tiquetes = tiquetes;
+    public void setClientes(Set<Cliente> clientes) {
+        this.clientes = clientes;
     }
 
 

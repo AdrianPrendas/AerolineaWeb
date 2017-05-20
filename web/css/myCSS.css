@@ -3,7 +3,7 @@
     font-size: 1.5em;
     color: #fff;
     text-transform: capitalize;
-    font-weight: 400;
+    font-weight: 75;
 
   background: #683717; /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(left,rgba(104,55,23,0.9), rgba(61,45,39,0.1)); /*Safari 5.1-6*/
@@ -57,8 +57,8 @@
 /*defaul*/
 #logo{position: relative;text-align: left;margin-bottom: -20px;margin-top:10px;}
 
-#logo img{width: 80px;}
-#logo h1{font-family: Georgia;display: inline-block;font-size: 40px;}
+#logo img{width: 40px;}
+#logo h1{font-family: Georgia;display: inline-block;font-size: 20px;}
 #carusel{margin-left: 0px;margin-right: 0px;}
 .carousel,.item,.active {height: 410px;}
 .carousel-inner {height: 410px;}
@@ -94,8 +94,8 @@
 	.carousel,.item,.active {height: 400px;}
 	.carousel-inner {height: 400px;}
 }
-@media screen and (min-width: 1200px) {  /* width:>1200 */
-	#logo h1{font-family: Georgia;display: inline-block;font-size: 40px;}
+@media screen and (min-width: 600px) {  /* width:>1200 */
+	#logo h1{font-family: Georgia;display: inline-block;font-size: 20px;}
 	#logo img{margin-top: -20px;margin-bottom: -20px;}
 	#carusel{margin-left: 0px;margin-right: 0px;}
 	.carousel,.item,.active {height: 370px;}

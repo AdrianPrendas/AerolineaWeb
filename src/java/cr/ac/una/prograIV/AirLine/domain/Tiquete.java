@@ -1,5 +1,5 @@
 package cr.ac.una.prograIV.AirLine.domain;
-// Generated 12-may-2017 14:55:18 by Hibernate Tools 4.3.1
+// Generated 18-may-2017 21:04:02 by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;
@@ -12,27 +12,29 @@ public class Tiquete  implements java.io.Serializable {
 
 
      private int pkNumero;
-     private Usuario usuario;
+     private Cliente cliente;
      private Vuelo vuelo;
      private boolean idaVuelta;
      private Set<Asiento> asientos = new HashSet<Asiento>(0);
+     private Set<Compra> compras = new HashSet<Compra>(0);
 
     public Tiquete() {
     }
 
 	
-    public Tiquete(int pkNumero, Usuario usuario, Vuelo vuelo, boolean idaVuelta) {
+    public Tiquete(int pkNumero, Cliente cliente, Vuelo vuelo, boolean idaVuelta) {
         this.pkNumero = pkNumero;
-        this.usuario = usuario;
+        this.cliente = cliente;
         this.vuelo = vuelo;
         this.idaVuelta = idaVuelta;
     }
-    public Tiquete(int pkNumero, Usuario usuario, Vuelo vuelo, boolean idaVuelta, Set<Asiento> asientos) {
+    public Tiquete(int pkNumero, Cliente cliente, Vuelo vuelo, boolean idaVuelta, Set<Asiento> asientos, Set<Compra> compras) {
        this.pkNumero = pkNumero;
-       this.usuario = usuario;
+       this.cliente = cliente;
        this.vuelo = vuelo;
        this.idaVuelta = idaVuelta;
        this.asientos = asientos;
+       this.compras = compras;
     }
    
     public int getPkNumero() {
@@ -42,12 +44,12 @@ public class Tiquete  implements java.io.Serializable {
     public void setPkNumero(int pkNumero) {
         this.pkNumero = pkNumero;
     }
-    public Usuario getUsuario() {
-        return this.usuario;
+    public Cliente getCliente() {
+        return this.cliente;
     }
     
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
     }
     public Vuelo getVuelo() {
         return this.vuelo;
@@ -69,6 +71,13 @@ public class Tiquete  implements java.io.Serializable {
     
     public void setAsientos(Set<Asiento> asientos) {
         this.asientos = asientos;
+    }
+    public Set<Compra> getCompras() {
+        return this.compras;
+    }
+    
+    public void setCompras(Set<Compra> compras) {
+        this.compras = compras;
     }
 
 

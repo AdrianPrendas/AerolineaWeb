@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 12-may-2017 14:55:19 by Hibernate Tools 4.3.1 -->
+<!-- Generated 18-may-2017 21:04:02 by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
     <class name="cr.ac.una.prograIV.AirLine.domain.Avion" table="avion" catalog="airline" optimistic-lock="version">
         <id name="pkId" type="int">
@@ -22,7 +22,7 @@
         </property>
         <set name="asientos" table="asiento" inverse="true" lazy="true" fetch="select">
             <key>
-                <column name="avion" not-null="true" />
+                <column name="avion_id" not-null="true" />
             </key>
             <one-to-many class="cr.ac.una.prograIV.AirLine.domain.Asiento" />
         </set>

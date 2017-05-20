@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 12-may-2017 14:55:19 by Hibernate Tools 4.3.1 -->
+<!-- Generated 18-may-2017 21:04:02 by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
     <class name="cr.ac.una.prograIV.AirLine.domain.Vuelo" table="vuelo" catalog="airline" optimistic-lock="version">
         <id name="pkNumero" type="int">
@@ -9,17 +9,17 @@
             <generator class="assigned" />
         </id>
         <many-to-one name="ciudadByCiudadDestino" class="cr.ac.una.prograIV.AirLine.domain.Ciudad" lazy="false" fetch="select">
-            <column name="ciudadDestino" length="3" not-null="true" />
+            <column name="ciudad_destino" length="3" not-null="true" />
         </many-to-one>
         <many-to-one name="ciudadByCiudadOrigen" class="cr.ac.una.prograIV.AirLine.domain.Ciudad" lazy="false" fetch="select">
-            <column name="ciudadOrigen" length="3" not-null="true" />
+            <column name="ciudad_origen" length="3" not-null="true" />
         </many-to-one>
         <property name="costo" type="int">
             <column name="costo" not-null="true" />
         </property>
         <set name="tiquetes" table="tiquete" inverse="true" lazy="false" fetch="select">
             <key>
-                <column name="vuelo" not-null="true" />
+                <column name="vuelo_numero" not-null="true" />
             </key>
             <one-to-many class="cr.ac.una.prograIV.AirLine.domain.Tiquete" />
         </set>

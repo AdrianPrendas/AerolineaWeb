@@ -19,7 +19,7 @@
     <div class="container cabecera">
         <div class="container">
             <a href="Index.jsp">
-                <h1 style="display: inline-block;">Hola Mundo</h1>    
+                <h1 style="display: inline-block;">Aerolineas Hola Mundo!</h1>    
             </a>
             
             <a href="#" onclick="alert('lupa');"><img src="pictures/lupa.png" title="buscar" style="width:75px;display:inline-block;margin-left: 10px;"></a>
@@ -31,8 +31,8 @@
                 </a>    
             </div>
             <div style="margin-top: 15px;margin-right: 10px; display: inline-flex; align-items: center; justify-content: end; float:right;">
-                <a href="#" onclick="alert('vacio');"><img id="imgCarrito" src="pictures/carrito_vacio.png" title="buscar" style="width:100px;display:inline-block;margin-right: 10px;display: none;"></a>
-                <a href="#" onclick="alert('lleno');"><img id="imgCarrito" src="pictures/carrito_lleno.png" title="buscar" style="width:100px;display:inline-block;margin-right: 10px;"></a>
+                <a href="#" onclick="alert('vacio');"><img id="imgCarrito" src="pictures/carrito_vacio.png" title="buscar" style="width:50px;display:inline-block;margin-right: 10px;display: none;"></a>
+                <a href="#" onclick="alert('lleno');"><img id="imgCarrito" src="pictures/carrito_lleno.png" title="buscar" style="width:50px;display:inline-block;margin-right: 10px;"></a>
 
                 <div class="checkbox" style="display:inline-block;">
                     <label>

@@ -1,19 +1,11 @@
-<%-- 
-    Document   : Index
-    Created on : 16-may-2017, 15:01:30
-    Author     : Josue
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">       
-        <title>JSP Page</title>
-        <%@ include file="HeadImports.jspf" %>
+        <%@ include file="imports.jspf" %>
     </head>
     <body style="background:#3F4DB8;font-family: Georgia;">
-        <%@ include file="Header.jspf" %> 
     <center>
         <div class="embed-responsive embed-responsive-16by9" style="height: 3000px;">
             <iframe class="embed-responsive-item" src="index2.html" ></iframe>
