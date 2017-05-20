@@ -13,17 +13,6 @@
     <body>
        <%@ include file="Header.jspf" %>
     <header>
-        <div class="container" id="logo">
-            <h1>Aerolineas Hola Mundo</h1>
-            <img src="pictures/logo2.png"/>			
-            <img src="pictures/logo3.png"/>
-            <img src="pictures/logo4.png"/>
-            <img src="pictures/logo5.png"/>
-            <img src="pictures/logo6.png"/>
-            <img src="pictures/logo7.png"/>
-            <img src="pictures/logo8.png"/>  
-            <img src="pictures/logo9.png"/>	
-        </div>
     </header>
     <div class="container">
         <br>
@@ -58,7 +47,9 @@
             <iframe name="frame" src= "index2.html" width=1150 height=600>  
             <ol id="listaCarrucel" class="carousel-indicators" ></ol>
             <!-- lista de objetos para el carrucel cargado por script load.js-->
-            <div id="imagenesCarrucel" class="carousel-inner" role="listbox" ></div>
+            <div id="imagenesCarrucel" class="carousel-inner" role="listbox" >
+                
+            </div>
             <!-- Wrapper for slides --><!-- img para c/u li anteriores cargado con script load.js-->
 
             <!-- Left and right controls -->

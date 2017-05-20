@@ -3,7 +3,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <%@ include file="imports.jspf" %>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">       
+        <title>JSP Page</title>
+        <%@ include file="HeadImports.jspf" %>
     </head>
     <body style="background:#3F4DB8;font-family: Georgia;">
     <center>

@@ -57,7 +57,7 @@
 /*defaul*/
 #logo{position: relative;text-align: left;margin-bottom: -20px;margin-top:10px;}
 
-#logo img{width: 40px;}
+#logo img{width: 75px;}
 #logo h1{font-family: Georgia;display: inline-block;font-size: 20px;}
 #carusel{margin-left: 0px;margin-right: 0px;}
 .carousel,.item,.active {height: 410px;}
@@ -67,14 +67,14 @@
 
 @media screen and (max-width: 400px) {  /* width:>200 */
 	#logo h1{font-family: Georgia;display: inline-block;font-size: 24px;}
-	#logo img{width: 45px;}
+	#logo img{width: 75px;}
 	#carusel{margin-left: 0px;margin-right: 0px;}
 	.carousel,.item,.active {height: 400px;}
 	.carousel-inner {height: 400px;}
 }
 @media screen and (min-width: 500px) {  /* width:>500 */
 	#logo h1{display: inline-block;}
-	#logo img{margin-top: 20px;}
+	#logo img{margin-top: 75px;}
 	#carusel{margin-left: 100px;margin-right: 100px;}
 	.carousel,.item,.active {height: 400px;}
 	.carousel-inner {height: 400px;}
