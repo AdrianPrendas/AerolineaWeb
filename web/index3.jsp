@@ -35,21 +35,21 @@
                         <li><a href="rutas.jsp" target="frame" class="navbar-brand">Rutas</a></li>
                         <li><a href="vuelos.jsp" target="frame" class="navbar-brand">Vuelos</a></li>
                         <li><a href="tiquetes.jsp" target="frame" class="navbar-brand">Tiquetes</a></li>
-                        <li><a href="servicios.jsp" target="frame" class="navbar-brand">Servicios</a></li>
-                        <li><a href="planes.jsp" target="frame" class="navbar-brand">Planes</a></li>
+                        <li><a href="ManagerCiudades.jsp" target="frame" class="navbar-brand">Agregar Ciudades</a></li>
+                        <li><a href="ManagerAviones.jsp" target="frame" class="navbar-brand">Agregar Aviones</a></li>
                         <li><a href="contactenos.jsp" target="frame" class="navbar-brand">Contactenos</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
 
-        <div id="carusel" class="carousel slide">
+        <d  iv id="carusel" class="carousel slide">
             <iframe name="frame" src= "index2.html" width=1150 height=600>  
-            <ol id="listaCarrucel" class="carousel-indicators" ></ol>
-            <!-- lista de objetos para el carrucel cargado por script load.js-->
-            <div id="imagenesCarrucel" class="carousel-inner" role="listbox" >
+                <ol id="listaCarrucel" class="carousel-indicators" ></ol>
+                <!-- lista de objetos para el carrucel cargado por script load.js-->
+                <div id="imagenesCarrucel" class="carousel-inner" role="listbox" >
                 
-            </div>
+                </div>
             <!-- Wrapper for slides --><!-- img para c/u li anteriores cargado con script load.js-->
 
             <!-- Left and right controls -->

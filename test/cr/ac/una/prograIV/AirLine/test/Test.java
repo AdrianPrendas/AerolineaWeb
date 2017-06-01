@@ -1,12 +1,5 @@
 package cr.ac.una.prograIV.AirLine.test;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-
 import cr.ac.una.prograIV.AirLine.bl.CiudadBL;
 import cr.ac.una.prograIV.AirLine.bl.VueloBL;
 import cr.ac.una.prograIV.AirLine.domain.Ciudad;
@@ -17,10 +10,6 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/**
- *
- * @author Josue
- */
 public class Test {
 
     private final int SJ0 = 0, LIB = 1, MIA = 2, CAN = 3, ORL = 4, MAD = 5, SFR = 6, AMS = 7, BER = 8;
@@ -35,26 +24,26 @@ public class Test {
         new Ciudad("AMS", "Amsterdan", "Holanda"),
         new Ciudad("BER", "Berlin", "Alemania"),};
 
-    public Test()throws Exception {
+    public Test() throws Exception {
         CiudadBL cBL = new CiudadBL();
-        VueloBL vBL = new VueloBL();
+//        VueloBL vBL = new VueloBL();
         
-        Vuelo[] vuelos = {
-            new Vuelo(randomNumVuelo(), getCiudad(SJ0), getCiudad(MIA), randomPrice()),
-            new Vuelo(randomNumVuelo(), getCiudad(LIB), getCiudad(CAN), randomPrice()),
-            new Vuelo(randomNumVuelo(), getCiudad(SJ0), getCiudad(ORL), randomPrice()),
-            new Vuelo(randomNumVuelo(), getCiudad(LIB), getCiudad(MAD), randomPrice()),
-            new Vuelo(randomNumVuelo(), getCiudad(SJ0), getCiudad(SFR), randomPrice()),
-            new Vuelo(randomNumVuelo(), getCiudad(LIB), getCiudad(AMS), randomPrice()),
-            new Vuelo(randomNumVuelo(), getCiudad(LIB), getCiudad(BER), randomPrice()),
-        };
+//        Vuelo[] vuelos = {
+//            new Vuelo(randomNumVuelo(), getCiudad(SJ0), getCiudad(MIA), randomPrice()),
+//            new Vuelo(randomNumVuelo(), getCiudad(LIB), getCiudad(CAN), randomPrice()),
+//            new Vuelo(randomNumVuelo(), getCiudad(SJ0), getCiudad(ORL), randomPrice()),
+//            new Vuelo(randomNumVuelo(), getCiudad(LIB), getCiudad(MAD), randomPrice()),
+//            new Vuelo(randomNumVuelo(), getCiudad(SJ0), getCiudad(SFR), randomPrice()),
+//            new Vuelo(randomNumVuelo(), getCiudad(LIB), getCiudad(AMS), randomPrice()),
+//            new Vuelo(randomNumVuelo(), getCiudad(LIB), getCiudad(BER), randomPrice()),
+//        };
         
         for(int i=0;i<cities.length;i++){
             cBL.save(getCiudad(i));
         }
-        for(int i=0;i<vuelos.length;i++){
-            vBL.save(vuelos[i]);
-        }
+//        for(int i=0;i<vuelos.length;i++){
+//            vBL.save(vuelos[i]);
+//        }
         
 
     }

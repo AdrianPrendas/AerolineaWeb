@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package cr.ac.una.prograIV.AirLine.dao;
 
 import cr.ac.una.prograIV.AirLine.domain.Vuelo;
@@ -10,15 +5,11 @@ import cr.ac.una.prograIV.AirLine.utils.HibernateUtil;
 import java.util.List;
 import org.hibernate.HibernateException;
 
-/**
- *
- * @author chgari
- */
 public class VueloDAO extends HibernateUtil implements IBaseDAO<Vuelo, Integer>{
-
+    
     @Override
     public void save(Vuelo o) {
-           try {
+        try {
             iniciaOperacion();
             getSession().save(o);
             getTransac().commit();
@@ -62,7 +53,6 @@ public class VueloDAO extends HibernateUtil implements IBaseDAO<Vuelo, Integer>{
     @Override
     public Vuelo findById(Integer id) {
         Vuelo vuelo = null;
-
         try {
             iniciaOperacion();
             vuelo = (Vuelo) getSession().get(Vuelo.class, id);
@@ -83,6 +73,5 @@ public class VueloDAO extends HibernateUtil implements IBaseDAO<Vuelo, Integer>{
         }
 
         return listaVuelos;
-    }
-    
+    }    
 }

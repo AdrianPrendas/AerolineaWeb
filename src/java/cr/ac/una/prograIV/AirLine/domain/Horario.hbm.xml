@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 31-may-2017 23:06:35 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="cr.ac.una.prograIV.AirLine.domain.Horario" table="horario" catalog="airline" optimistic-lock="version">
+        <id name="pkId" type="int">
+            <column name="pk_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="fechaSalida" type="date">
+            <column name="fecha_salida" length="10" not-null="true" />
+        </property>
+        <property name="horaSalida" type="time">
+            <column name="hora_salida" length="8" not-null="true" />
+        </property>
+        <property name="horaLlegada" type="time">
+            <column name="hora_llegada" length="8" not-null="true" />
+        </property>
+        <property name="fechaRegreso" type="date">
+            <column name="fecha_regreso" length="10" />
+        </property>
+        <property name="precio" type="int">
+            <column name="precio" not-null="true" />
+        </property>
+        <set name="vuelos" table="vuelo" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="horario" not-null="true" />
+            </key>
+            <one-to-many class="cr.ac.una.prograIV.AirLine.domain.Vuelo" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -44,3 +44,24 @@ Proxy.vuelosSearch = function (origen,destino,callBack) {
     AJAX_req.send("origen="+origen+"&destino="+destino);
 };
 
+Proxy.avionAdd = function(avion,callBack){
+    var jsonProducto = JSON.stringify(avion,JsonUtils.replacer);
+    var AJAX_req = new XMLHttpRequest();
+      
+    url="/33-CarritoCompra/ProductosService?action=ProductAdd";
+    AJAX_req.open( "POST", url, true );
+    AJAX_req.setRequestHeader("Content-type", "application/x-www-form-urlencoded");      
+    AJAX_req.onreadystatechange = function(){
+        if( AJAX_req.readyState === 4 && AJAX_req.status === 200 ){
+            if (parseInt(AJAX_req.responseText)==0){
+                Proxy.productAddImagen(producto.codigo, imagen, callBack);
+            }
+            else{
+                callBack(1);
+            }
+        }
+        
+    };
+    AJAX_req.send("product="+jsonProducto); 
+};
+

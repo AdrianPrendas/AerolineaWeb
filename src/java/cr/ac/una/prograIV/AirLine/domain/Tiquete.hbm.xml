@@ -1,22 +1,19 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 18-may-2017 21:04:02 by Hibernate Tools 4.3.1 -->
+<!-- Generated 31-may-2017 23:06:35 by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
     <class name="cr.ac.una.prograIV.AirLine.domain.Tiquete" table="tiquete" catalog="airline" optimistic-lock="version">
-        <id name="pkNumero" type="int">
+        <id name="pkNumero" type="java.lang.Integer">
             <column name="pk_numero" />
-            <generator class="assigned" />
+            <generator class="identity" />
         </id>
         <many-to-one name="cliente" class="cr.ac.una.prograIV.AirLine.domain.Cliente" fetch="select">
-            <column name="cliente_id" not-null="true" />
+            <column name="cliente" not-null="true" />
         </many-to-one>
         <many-to-one name="vuelo" class="cr.ac.una.prograIV.AirLine.domain.Vuelo" fetch="select">
-            <column name="vuelo_numero" not-null="true" />
+            <column name="vuelo" not-null="true" />
         </many-to-one>
-        <property name="idaVuelta" type="boolean">
-            <column name="ida_vuelta" not-null="true" />
-        </property>
         <set name="asientos" table="asiento" inverse="true" lazy="true" fetch="select">
             <key>
                 <column name="tiquete_numero" not-null="true" />

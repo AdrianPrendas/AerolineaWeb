@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 18-may-2017 21:04:02 by Hibernate Tools 4.3.1 -->
+<!-- Generated 31-may-2017 23:06:35 by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
     <class name="cr.ac.una.prograIV.AirLine.domain.Cliente" table="cliente" catalog="airline" optimistic-lock="version">
         <id name="pkId" type="int">
@@ -32,10 +32,9 @@
         <property name="direccion2" type="java.lang.Float">
             <column name="direccion2" precision="12" scale="0" />
         </property>
-        <one-to-one name="compra" class="cr.ac.una.prograIV.AirLine.domain.Compra"></one-to-one>
         <set name="tiquetes" table="tiquete" inverse="true" lazy="true" fetch="select">
             <key>
-                <column name="cliente_id" not-null="true" />
+                <column name="cliente" not-null="true" />
             </key>
             <one-to-many class="cr.ac.una.prograIV.AirLine.domain.Tiquete" />
         </set>

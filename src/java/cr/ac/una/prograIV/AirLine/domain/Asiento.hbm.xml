@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 18-may-2017 21:04:02 by Hibernate Tools 4.3.1 -->
+<!-- Generated 31-may-2017 23:06:35 by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
     <class name="cr.ac.una.prograIV.AirLine.domain.Asiento" table="asiento" catalog="airline" optimistic-lock="version">
         <id name="pkNumero" type="string">
@@ -9,10 +9,13 @@
             <generator class="assigned" />
         </id>
         <many-to-one name="avion" class="cr.ac.una.prograIV.AirLine.domain.Avion" fetch="select">
-            <column name="avion_id" not-null="true" />
+            <column name="Avion_id" not-null="true" />
         </many-to-one>
         <many-to-one name="tiquete" class="cr.ac.una.prograIV.AirLine.domain.Tiquete" fetch="select">
             <column name="tiquete_numero" not-null="true" />
         </many-to-one>
+        <property name="clase" type="string">
+            <column name="clase" length="10" />
+        </property>
     </class>
 </hibernate-mapping>
